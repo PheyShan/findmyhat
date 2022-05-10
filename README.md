@@ -1,6 +1,6 @@
 # findmyhat
 
-Reflect on the following questions in your readme file
+Reflect on the following questions in your readme file:
 ●	What did you like about this project?
 Interesting game programming.
 ●	What did you struggle with in this project?
