@@ -1,0 +1,19 @@
+{
+  "name": "findmyhat",
+  "version": "1.0.0",
+  "description": "JavaScript Assessment",
+  "main": "index.js",
+  "scripts": {
+    "main": "node main.js",
+    "hat" : "node hat.js",
+    "hat1" : "node hat1.js",
+    "code" : "node code.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PheyShan",
+  "license": "ISC",
+  "dependencies": {
+    "clear-screen": "^1.0.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
