@@ -33,8 +33,7 @@ class Field {
             this.field[a] = [];
         }
 
-        this.generateField(); // need to put in the patches of grass in the plot
-        this.field[0][0] = pathCharacter; // set the character position as [0][0], the character * can be always at the default of position (0,0) 
+        this.generateField(); // need to put in the patches of grass in the plot        
     }
 
 
@@ -47,7 +46,10 @@ class Field {
                 this.field[y][x] = prob > percentage ? fieldCharacter: hole;
             }
         }
-        
+
+        // set the character position as [0][0], the character * can be always at the default of position (0,0) 
+        this.field[this.locationY][this.locationX] = pathCharacter; 
+
         // Set the hat location
         const hatLocation = {
             x: Math.floor(Math.random() * col),
@@ -59,8 +61,8 @@ class Field {
         hatLocation.x = Math.floor(Math.random() * col);
         hatLocation.y = Math.floor(Math.random() * row);
         }
-        field[hatLocation.y][hatLocation.x] = hat;
-        return field;             
+        this.field[hatLocation.y][hatLocation.x] = hat;
+                    
     }
 
     runGame() {
@@ -87,8 +89,8 @@ class Field {
         return (
           this.locationY >= 0 &&
           this.locationX >= 0 &&
-          this.locationY < this.field.length &&
-          this.locationX < this.field[0].length
+          this.locationY < row && // OR this.locationY < row &&//
+          this.locationX < col  // OR this.field[0].length//
         );
     }
 
